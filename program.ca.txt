@@ -1,0 +1,40 @@
+// Import the System namespace
+using System;
+
+// Create the namespace
+namespace EmployeeComparisonApp
+{
+// Main program class
+class Program
+{
+// Main method where the program starts
+static void Main(string[] args)
+{
+// Create the first Employee object
+Employee employee1 = new Employee();
+
+// Assign values to employee1
+employee1.Id = 1;
+employee1.FirstName = "John";
+employee1.LastName = "Smith";
+
+// Create the second Employee object
+Employee employee2 = new Employee();
+
+// Assign values to employee2
+// The Id is the same, so they should be considered equal
+employee2.Id = 1;
+employee2.FirstName = "Sarah";
+employee2.LastName = "Johnson";
+
+// Compare the two Employee objects using the overloaded == operator
+Console.WriteLine("employee1 == employee2: " + (employee1 == employee2));
+
+// Compare the two Employee objects using the overloaded != operator
+Console.WriteLine("employee1 != employee2: " + (employee1 != employee2));
+
+// Pause the console so the result stays on the screen
+Console.ReadLine();
+}
+}
+}
